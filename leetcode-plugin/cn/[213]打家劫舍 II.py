@@ -33,14 +33,18 @@ class Solution(object):
 
             elif len(nums) == 2:
                 print(None)
+                exit(0)
             else:
                 nums_r = nums.copy()
-                nums_r.pop(0)
-                nums_r.pop()
+                if nums[0] < nums[-1]:
+                    nums_r.pop(0)
+                if nums[0] > nums[-1]:
+                    nums_r.pop()
 
                 if len(nums_r):
                     if len(nums_r) == 2:
                         print(None)
+                        exit(0)
                     rob_list = nums_r[::2]
                     logging.info("rob_list: {}".format(rob_list))
                     print(sum(rob_list))
@@ -54,6 +58,6 @@ class Solution(object):
 
 if __name__ == '__main__':
 
-    nums = [1, 2, 3]
+    nums = [1, 2, 3, 4]
     result = Solution.rob(nums)
 
