@@ -6,7 +6,7 @@
 # 输出: 6
 # 解释: 数字 1 出现在以下数字中: 1, 10, 11, 12, 13 。
 #
-
+import logging
 
 class Solution(object):
     @staticmethod
@@ -15,11 +15,18 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        contain_list = []
         if n > 0:
-            for i in range(n+1):
-                print(i)
+            for i in range(n):
+                # print(i)
+                contain_str = "1"
+                if contain_str in str(i):
+                    logging.info(i)
+                    contain_list.append(i)
+            logging.info(contain_list)
+            print(len(contain_list))
 
 
 if __name__ == '__main__':
-    n = 15
+    n = 19
     result = Solution.countDigitOne(n)
