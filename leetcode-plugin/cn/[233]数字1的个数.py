@@ -8,6 +8,7 @@
 #
 import logging
 
+
 class Solution(object):
     @staticmethod
     def countDigitOne(n):
