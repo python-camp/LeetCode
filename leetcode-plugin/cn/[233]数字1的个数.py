@@ -18,7 +18,7 @@ class Solution(object):
         """
         contain_list = []
         if n > 0:
-            for i in range(n):
+            for i in range(n+1):
                 # print(i)
                 contain_str = "1"
                 if contain_str in str(i):
